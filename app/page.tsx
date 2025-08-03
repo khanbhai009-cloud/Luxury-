@@ -384,5 +384,316 @@ export default function Home() {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link 
+                    <Link   href="https://luxuriousitems.netlify.app"
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-bold text-center transition-all duration-300 hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 cursor-pointer whitespace-nowrap"
+                      onClick={() => localStorage.setItem('lastClickedProduct', product.name)}
+                    >
+                      <i className="ri-shopping-bag-line mr-2"></i>
+                      Shop Now
+                    </Link>
+                    <button 
+                      onClick={() => copyLink('https://luxuriousitems.netlify.app', product.name)}
+                      className={`px-6 py-4 rounded-2xl border-2 border-purple-500 text-purple-500 font-bold hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap ${darkMode ? 'hover:text-white' : ''}`}
+                    >
+                      <i className="ri-share-line mr-2"></i>Share
+                    </button>
+                  </div>
+                  
+                  {showCopyMessage === product.name && (
+                    <div className="mt-4 text-center">
+                      <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold animate-bounce">
+                        Link copied! 🎉
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <div className={`max-w-5xl mx-auto p-10 rounded-3xl mb-12 ${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-gray-50 to-white'} shadow-2xl`}>
+              <h3 className="text-3xl font-black mb-8 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Why Choose Our Premium Collection? 👑
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <i className="ri-sparkle-fill text-white text-2xl"></i>
+                  </div>
+                  <h4 className="font-bold mb-2">Premium Quality</h4>
+                  <p className="text-sm opacity-80">High-quality materials ensuring comfort and durability</p>
+                </div>
+                
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <i className="ri-camera-fill text-white text-2xl"></i>
+                  </div>
+                  <h4 className="font-bold mb-2">Instagram-Ready</h4>
+                  <p className="text-sm opacity-80">Perfect for social media content and photography</p>
+                </div>
+                
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <i className="ri-rocket-fill text-white text-2xl"></i>
+                  </div>
+                  <h4 className="font-bold mb-2">Trendy Designs</h4>
+                  <p className="text-sm opacity-80">Latest fashion trends and contemporary styles</p>
+                </div>
+                
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <i className="ri-shield-check-fill text-white text-2xl"></i>
+                  </div>
+                  <h4 className="font-bold mb-2">100% Satisfaction</h4>
+                  <p className="text-sm opacity-80">Money-back guarantee on all purchases</p>
+                </div>
+              </div>
+            </div>
+
+            <Link 
+              href="https://luxuriousitems.netlify.app"
+              className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-12 py-6 rounded-full text-xl font-black hover:from-blue-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl cursor-pointer whitespace-nowrap uppercase"
+            >
+              View Full Collection 🛍️
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Ultra Advanced PinealXT Section */}
+      <section id="supplements" className={`py-24 relative overflow-hidden ${darkMode ? 'bg-gradient-to-br from-gray-800 via-gray-900 to-black' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100'}`}>
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-green-400 to-blue-500 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-green-600 font-bold text-lg uppercase tracking-widest">Brain Enhancement</span>
+            <h2 className="text-5xl md:text-6xl font-black mt-4 mb-6 bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+              PINEALXT REVOLUTION 🧠
+            </h2>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+              Unlock your brain's full potential with natural performance enhancement that transforms your mind
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <img 
+                src="https://readdy.ai/api/search-image?query=Premium%20brain%20supplement%20bottle%20PinealXT%20with%20natural%20ingredients%2C%20professional%20product%20photography%2C%20clean%20white%20background%2C%20modern%20packaging%20design%2C%20health%20and%20wellness%20theme%2C%20high-quality%20supplement%20bottle%20with%20clear%20labeling%2C%20minimalist%20aesthetic%2C%20trustworthy%20medical%20product%20presentation&width=600&height=600&seq=pineal001&orientation=squarish"
+                alt="PinealXT Supplement"
+                className="relative w-full rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-4xl font-black mb-6 bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+                  Transform Your Mind Today! ⚡
+                </h3>
+                
+                <div className={`p-8 rounded-3xl mb-8 ${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-white to-gray-50'} shadow-2xl border border-gray-200/50 dark:border-gray-700/50`}>
+                  <h4 className="text-2xl font-bold mb-4 text-green-600">What is PinealXT? 🌟</h4>
+                  <p className="leading-relaxed mb-4">
+                    PinealXT is a revolutionary brain supplement designed to optimize your cognitive function and unlock your mind's full potential. Formulated with 100% natural ingredients, it targets the pineal gland - often called the "third eye" - to enhance mental clarity, focus, and overall brain health.
+                  </p>
+                  <p className="leading-relaxed">
+                    Our proprietary blend combines ancient wisdom with modern science, featuring carefully selected herbs and nutrients that have been used for centuries to support brain function and spiritual awareness.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  {[
+                    "Enhanced cognitive function and mental clarity",
+                    "Natural detox for optimal brain health",
+                    "Improved focus and memory retention",
+                    "100% natural ingredients, no side effects",
+                    "Supports healthy sleep patterns and energy levels",
+                    "Enhances spiritual awareness and intuition"
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3 group">
+                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                        <i className="ri-checkbox-circle-fill text-white"></i>
+                      </div>
+                      <span className="font-semibold">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Enhanced Countdown Timer */}
+                <div className={`p-8 rounded-3xl mb-8 ${darkMode ? 'bg-gradient-to-r from-red-900/30 to-pink-900/30 border border-red-500/50' : 'bg-gradient-to-r from-red-50 to-pink-50 border border-red-200'} shadow-2xl`}>
+                  <h4 className="text-2xl font-bold text-red-600 mb-6 text-center">⏰ LIMITED TIME OFFER!</h4>
+                  <div className="flex justify-center space-x-6 mb-4">
+                    {[
+                      { label: 'Hours', value: timeLeft.hours },
+                      { label: 'Minutes', value: timeLeft.minutes },
+                      { label: 'Seconds', value: timeLeft.seconds }
+                    ].map((time, index) => (
+                      <div key={index} className="text-center">
+                        <div className="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 rounded-2xl shadow-lg">
+                          <div className="text-3xl font-black">{String(time.value).padStart(2, '0')}</div>
+                        </div>
+                        <div className="text-sm font-semibold mt-2">{time.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-center text-red-600 font-bold text-lg animate-pulse">
+                    🔥 Only few bottles left in stock!
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <Link 
+                    href="https://pxt.pinealxt.com/ds/presentation/index.php#aff=ak7532"
+                    className="flex-1 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white px-8 py-5 rounded-2xl text-lg font-black text-center transition-all duration-300 hover:from-green-700 hover:to-purple-700 transform hover:scale-105 hover:shadow-2xl cursor-pointer whitespace-nowrap"
+                    onClick={() => localStorage.setItem('lastClickedProduct', 'PinealXT')}
+                  >
+                    🚀 Boost My Brain Now - 50% OFF!
+                  </Link>
+                  <button 
+                    onClick={() => copyLink('https://pxt.pinealxt.com/ds/presentation/index.php#aff=ak7532', 'PinealXT')}
+                    className={`px-8 py-5 rounded-2xl border-2 border-green-500 text-green-500 font-bold hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap ${darkMode ? 'hover:text-white' : ''}`}
+                  >
+                    <i className="ri-share-line mr-2"></i>Share Link
+                  </button>
+                </div>
+                
+                {showCopyMessage === 'PinealXT' && (
+                  <div className="text-center mt-4">
+                    <span className="bg-green-500 text-white px-6 py-3 rounded-full font-bold animate-bounce">
+                      Link copied to clipboard! 🎉
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced FAQ Section */}
+          <div className="mt-20">
+            <h3 className="text-4xl font-black text-center mb-12 bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+              Frequently Asked Questions 💡
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  question: "How quickly will I see results?",
+                  answer: "Most users report improved mental clarity within the first week, with significant cognitive enhancement after 30 days of consistent use. The natural ingredients work gradually to optimize your brain function without causing jitters or crashes."
+                },
+                {
+                  question: "Is PinealXT safe for daily use?",
+                  answer: "Absolutely! PinealXT is made with 100% natural ingredients and is completely safe for daily consumption with no known side effects. All ingredients are carefully sourced and tested for purity and potency."
+                },
+                {
+                  question: "What's your money-back guarantee?",
+                  answer: "We offer a 100% satisfaction guarantee. If you're not completely satisfied within 60 days, we'll refund your purchase - no questions asked! We're confident you'll love the results."
+                },
+                {
+                  question: "How should I take PinealXT?",
+                  answer: "Take 2 capsules daily with water, preferably in the morning with breakfast. For best results, maintain consistent daily use and pair with a healthy lifestyle including proper sleep and nutrition."
+                }
+              ].map((faq, index) => (
+                <div key={index} className={`p-8 rounded-3xl ${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-white to-gray-50'} shadow-2xl border border-gray-200/50 dark:border-gray-700/50 hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1`}>
+                  <h4 className="text-xl font-black mb-4 text-green-600">{faq.question}</h4>
+                  <p className="leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ultra Advanced Testimonials Section */}
+      <section className={`py-24 ${darkMode ? 'bg-gradient-to-r from-gray-900 to-black' : 'bg-gradient-to-r from-white to-gray-50'}`}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-yellow-600 font-bold text-lg uppercase tracking-widest">Success Stories</span>
+            <h2 className="text-5xl md:text-6xl font-black mt-4 mb-6 bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent">
+              WHAT OUR CUSTOMERS SAY 🌟
+            </h2>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+              Join thousands of satisfied customers who have transformed their lives with our products
+            </p>
+          </div>
+
+          {/* Auto-rotating Testimonials */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className={`p-10 rounded-3xl ${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-white to-gray-50'} shadow-2xl border border-gray-200/50 dark:border-gray-700/50`}>
+                      <div className="text-center mb-8">
+                        <div className="flex justify-center mb-6">
+                          {[...Array(5)].map((_, i) => (
+                            <i key={i} className="ri-star-fill text-yellow-400 text-2xl animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></i>
+                          ))}
+                        </div>
+                        <blockquote className="text-2xl font-semibold italic mb-8 leading-relaxed">
+                          "{testimonial.text}"
+                        </blockquote>
+                        <div className="flex items-center justify-center space-x-4">
+                          <img 
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            className="w-16 h-16 rounded-full border-4 border-gradient-to-r from-purple-500 to-pink-500"
+                          />
+                          <div className="text-left">
+                            <div className="text-xl font-bold">{testimonial.name}</div>
+                            <div className="text-purple-600 font-semibold">{testimonial.role}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Testimonial Indicators */}
+            <div className="flex justify-center space-x-3 mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-4 h-4 rounded-full transition-all duration-300 cursor-pointer ${
+                    index === currentTestimonial 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
+                      : 'bg-gray-300 dark:bg-gray-600 hover:bg-purple-300'
+                  }`}
+                ></button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ultra Advanced Contact Section */}
+      <section id="contact" className={`py-24 relative overflow-hidden ${darkMode ? 'bg-gradient-to-br from-gray-800 via-gray-900 to-black' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100'}`}>
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-blue-600 font-bold text-lg uppercase tracking-widest">Connect With Us</span>
+            <h2 className="text-5xl md:text-6xl font-black mt-4 mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+              GET IN TOUCH 💬
+            </h2>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+              Ready to transform your life? Let's start the conversation and unlock your potential together
+            </p>
+          </div>
+          
+          {/* Enhanced Social Links */}
+          <div className="flex flex-col s
      
